@@ -9,7 +9,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring_config.xml");
-//        ApplicationContext context = new FileSystemXmlApplicationContext("C:\\Users\\xujian\\Documents\\GitHub\\SpringDemo\\src\\main\\resources\\Beans.xml");
         HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
         obj.printMessage();
     }
