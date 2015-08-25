@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="helloWorld" class="first_spring.HelloWorld">
-        <constructor-arg name="message" value="Hello World"></constructor-arg>
+        <constructor-arg name="message" value="Hello , I was DI by constructor"></constructor-arg>
+        <property name="setterMessage" value="Hello , I was DI by setter"></property>
     </bean>
 </beans>

@@ -11,5 +11,6 @@ public class Test {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring_config.xml");
         HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
         obj.printMessage();
+        obj.printSetterMessage();
     }
 }
