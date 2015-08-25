@@ -1,11 +1,16 @@
 package first_spring;
 
+import javax.annotation.Resource;
+
 /**
  * Created by xujian on 2015/8/25.
  */
 public class HelloWorld {
     private String message;
     private String setterMessage;
+
+    @Resource
+    private String resField;
 
     public String getSetterMessage() {
         return setterMessage;

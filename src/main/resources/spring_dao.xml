@@ -3,7 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="helloWorld" class="first_spring.HelloWorld">
-        <constructor-arg name="message" value="Hello , I was DI by constructor"></constructor-arg>
+        <constructor-arg index="0" name="message" value="Hello , I was DI by constructor"></constructor-arg>
         <property name="setterMessage" value="Hello , I was DI by setter"></property>
+    </bean>
+
+    <bean id="triangle" class="triangle.Triangle">
+        <property name="point">
+            <bean class="triangle.Point">
+                <property name="x" value="1"></property>
+                <property name="y" value="2"></property>
+            </bean>
+        </property>
     </bean>
 </beans>
